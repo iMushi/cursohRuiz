@@ -502,8 +502,6 @@ const jsonData = {
     vendor_codes: []
 }
 
-
-
 const {
     car
     ,car:{details:{doors:puertas}}
