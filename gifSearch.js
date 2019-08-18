@@ -15,7 +15,7 @@ function getGif(){
             const { images: {fixed_height_small: url}  } = data
 
             const urlGet = _.get(json.data,'0.images.fixed_height_small.url');
-            º
+
             document.getElementById('myImage').src = urlGet;
         })
         .catch( err => {
