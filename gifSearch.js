@@ -21,11 +21,10 @@ function getGif(){
         .catch( err => {
             console.log(err)
         })
+
 }
 
 
 function transformJson( response ) {
     return response.json()
 }
-
-
