@@ -1,0 +1,36 @@
+$colors: (
+        primary: #005DFF,
+        azul-brillo: lighten(#005DFF, 40%),
+        azul-oscuro: darken(#005DFF, 40%),
+        acento: #FFF6BB
+);
+
+$breakpoints: (
+        small: 0px,
+        medium: 767px,
+        large: 1200px
+);
+
+$padding: 15px;
+$borders: 15px;
+
+@function color($color-name){
+  @return map-get($colors, $color-name)
+}
+
+@mixin viewport($breakpoint){
+  @if map-has-key($breakpoints, $breakpoint){
+    @media (screen and min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content
+    }
+  }
+  @else{
+    @warn "No existe Viewport `#{$breakpoint}` "
+  }
+}
+
+@mixin viewLarge {
+  @media (min-width: #{map-get($breakpoints, large)}){
+    @content
+  }
+}
