@@ -35,7 +35,7 @@ function obten3Imagenes(){
         asyncGetGif(),
         asyncGetGif(),
         asyncGetGif()
-    ]
+]
 
     Promise.all(promiseJar).then(
         ([primera, segunda, tercera])=> {
@@ -48,6 +48,7 @@ function obten3Imagenes(){
             document.getElementById('myImagePrimera').src = urlGetPrimera;
             document.getElementById('myImageSegunda').src = urlGetSegunda;
             document.getElementById('myImageTercera').src = urlGetTercera;
+
 
 
         }
